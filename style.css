@@ -72,3 +72,85 @@ main {
 
 
 /*TEXT CONTENT */
+
+.text {
+    color: rgb(255, 208, 170)
+}
+
+
+/* IMAGE: */
+
+.img {
+    /* width: 320px; */
+    height: 320px;
+}
+
+
+/* IMAGE  DETAILS */
+
+.img img {
+    border-radius: 10px;
+}
+
+.detail-img {
+    width: 300px;
+    height: 100%;
+    text-align: center;
+}
+
+.detail-img img {
+    width: 75%;
+    border-radius: 10px;
+}
+
+
+/* CARD*/
+
+.card-material {
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-radius: 20px;
+    box-shadow: 0 3px 10px gray;
+    background: linear-gradient(to right, rgb(20, 20, 20), rgb(46, 44, 44)), linear-gradient(to right, rgb(36, 243, 243), rgb(248, 5, 119));
+    background-clip: padding-box, border-box;
+    background-origin: padding-box, border-box;
+    background-color: rgb(36, 34, 34);
+    border-radius: 10px;
+    color: rgb(251, 1, 1);
+}
+
+.card-material:hover {
+    transform: scale(1.02);
+    transition: transform .3s ease;
+}
+
+
+/* Error Styles */
+
+.error {
+    color: red;
+}
+
+
+/* Spinner Style */
+
+#spinner {
+    display: none;
+    height: 100%;
+}
+
+footer {
+    /* border-top: 1px solid rgb(61, 55, 55); */
+}
+
+
+/* Media Query */
+
+@media only screen and (max-width: 600px) {
+    .search-field {
+        width: 80%;
+    }
+    main {
+        margin-top: 25%;
+    }
+}
