@@ -3,7 +3,7 @@ const mobileDetailContainer = document.getElementById('mobile-detail');
 const displayMobileDiv = document.getElementById('display-mobile-container');
 const textContent = document.getElementById('text-content');
 const errorContainer = document.getElementById('error-msg');
-// Spinner Function:
+//SPINNER FUNCTION:
 const loadSpinner = displayStyle => {
     document.getElementById('spinner').style.display = displayStyle;
 }
@@ -16,7 +16,7 @@ const displayMobileDetailDiv = displayStyle => {
 const displayTextContent = displayStyle => {
         textContent.style.display = displayStyle;
     }
-    // Load All Mobiles:
+    // LOADING ALL MOBILE:
 const loadMobiles = () => {
     const searchInput = document.getElementById('search-input').value;
     loadSpinner('block');
@@ -24,16 +24,16 @@ const loadMobiles = () => {
     displayMobileDetailDiv('none');
     displayTextContent('none');
 
-    // Condition when not write something:
+    //  EMPTY CONDITION:
     if (searchInput.length == 0) {
         const div = document.createElement('div');
         const h5 = document.createElement('h5');
-        h5.innerText = 'Please Write Mobile Name!';
+        h5.innerText = 'Please Write Mobile or Watch Name!';
         div.appendChild(h5);
         errorContainer.appendChild(div);
         loadSpinner('none');
     } else {
-        // Fetch Data From API:
+        //  FETCH DATA FROM API:
         const url = `https://openapi.programming-hero.com/api/phones?search=${searchInput}`;
         fetch(url)
             .then(res => res.json())
@@ -41,19 +41,19 @@ const loadMobiles = () => {
     }
 }
 
-// Display Search Mobile:
+// SEARCHING MOBILE:
 const displayMobile = mobiles => {
-    // Clear Content
+    // CLEAR CONTENT
     mobileContainer.textContent = '';
     mobileDetailContainer.textContent = '';
     errorContainer.textContent = '';
     console.log(mobiles.length)
 
-    // Condition when no mobile found:
+    // RESULT NOT FOUND CONDITION:
     if (mobiles.length == 0) {
         const div = document.createElement('div');
         const h5 = document.createElement('h5');
-        h5.innerText = 'Sorry! No Result Found';
+        h5.innerText = 'Sorry!  Result Not Found';
         div.appendChild(h5);
         errorContainer.appendChild(div);
         loadSpinner('none');
@@ -87,7 +87,7 @@ const displayMobile = mobiles => {
     }
 }
 
-// Load Mobile Detail:
+// LOADING DETAILS FOR MOBILE :
 const loadPhoneDetail = mobile => {
     console.log(mobile)
     displayMobileContainer('none');
@@ -107,7 +107,7 @@ const loadPhoneDetail = mobile => {
     });
 }
 
-// Display Mobile Detail:
+// DISPLAYING FOR MOBILE DETAILS :
 const displayMobileDetail = (mobile, sensors) => {
     displayMobileDetailDiv('none');
     console.log(mobile)
@@ -120,13 +120,13 @@ const displayMobileDetail = (mobile, sensors) => {
     const sensorsDiv = document.createElement('div');
     const ul = document.createElement('ul');
 
-    // Image Div InnerHtml:
+    //  IMAGE INNER HTML:
     imgDiv.innerHTML = `
                         <div class="detail-img d-flex align-items-center justify-content-center h-100">
                                 <img class="img-fluid" src="${mobile.image}" alt="">
                         </div>
         `;
-    // Main Features:
+    // MAIN :
     featuresDiv.innerHTML = `
         <div class="ps-4 pe-4 pt-4">
                 <h4 class="brand-color fw-bold">${mobile.name}</h4>
@@ -143,7 +143,7 @@ const displayMobileDetail = (mobile, sensors) => {
         `
     informationDiv.appendChild(featuresDiv);
 
-    // Sensors Div:
+    // SENSORS:
     sensorsDiv.classList.add('ps-4');
     sensorsDiv.classList.add('text-white');
     sensors.forEach(sensor => {
@@ -155,7 +155,7 @@ const displayMobileDetail = (mobile, sensors) => {
     sensorsDiv.appendChild(ul);
     informationDiv.appendChild(sensorsDiv);
 
-    // Others feature:
+    // OTHERS :
     othersDiv.innerHTML = `
                 <div class="ps-4">
                         <h4 class="brand-color mt-4 fw-bold">Others:</h4>
@@ -171,7 +171,7 @@ const displayMobileDetail = (mobile, sensors) => {
         `
     informationDiv.appendChild(othersDiv);
 
-    // Append All In Div:
+    // APPEND:
     mobileDetailContainer.appendChild(imgDiv);
     mobileDetailContainer.appendChild(informationDiv);
     loadSpinner('none');
