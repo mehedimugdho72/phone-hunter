@@ -61,7 +61,7 @@ const displayMobile = mobiles => {
         mobiles.slice(0, 20).forEach((mobile) => {
             const div = document.createElement('div');
             div.classList.add('col');
-            // div.classList.add('p-2');
+
             div.innerHTML = `
                         <div class="h-100 pb-3 card-material">
                                 <div class="img text-center pt-5">
