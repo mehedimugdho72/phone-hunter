@@ -1,3 +1,74 @@
 * {
     font-family: 'Libre Baskerville', serif !important;
 }
+
+body {
+    background-color: black !important;
+}
+
+main {
+    margin-top: 8%;
+}
+
+
+/* NAVBAR */
+
+#nav {
+    background-color: black;
+}
+
+.nav-link h5:hover {
+    background: linear-gradient(to right, rgb(36, 243, 243), rgb(0, 255, 191));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.navbar-brand img {
+    /* border-radius: 70px; */
+}
+
+
+/* BRANDING*/
+
+.brand-color {
+    background: linear-gradient(to right, rgb(36, 243, 243), rgb(255, 115, 0));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.search-field {
+    width: 30%;
+}
+
+
+/* BRAND BUTTON*/
+
+.brand-btn,
+#search-btn {
+    background: linear-gradient(to right, rgb(36, 243, 243), rgb(0, 255, 34));
+    font-weight: 700;
+    border: 2px solid rgb(246, 0, 193);
+}
+
+.brand-btn:hover {
+    transform: scale(1.10);
+    transition: transform .3s ease-in-out;
+    background: linear-gradient(to right, rgb(20, 20, 20), rgb(253, 69, 69));
+    border: 2px solid rgb(255, 0, 212);
+    color: rgb(221, 251, 119) !important;
+}
+
+#search-input {
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    padding: 8px;
+}
+
+#search-btn {
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    width: 90px;
+}
+
+
+/*TEXT CONTENT */
