@@ -23,12 +23,16 @@
 
 <body>
     <header>
+        <!-- MARQUEE START -->
+        <!-- <marquee direction="" scrollamount="12" class=" bg-primary fs-2 m-3 p-2 fw-bold text-light rounded-3 ">
+            Welcome To My Mobile Mart Express</marquee> -->
+        <!-- MARQUEE END -->
         <nav id="nav" class="navbar navbar-expand-lg navbar-dark pt-3 fixed-top">
             <div class="container">
-                <h2 class="fs-1 brand-color fw-bold">Mobile Mart Express</h2>
+                <h2 class="fs-1 brand-color fw-bold">Mobile Mart</h2>
                 <!-- MARQUEE START -->
-                <marquee direction="" scrollamount="12" class=" bg-primary fs-2 m-3 p-2 fw-bold text-light rounded-3 ">
-                    Welcome To Phone Gadget World</marquee>
+                <!-- <marquee direction="" scrollamount="12" class=" bg-primary fs-2 m-3 p-2 fw-bold text-light rounded-3 ">
+                    Welcome To My Mobile Mart Express</marquee> -->
                 <!-- MARQUEE END -->
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                                     <span class="navbar-toggler-icon"></span>
@@ -62,8 +66,58 @@
     </header>
     <!-- HEADER END -->
 
-    <body>
+    <!-- MAIN SECTION START-->
+    <main>
+        <!-- SEARCH SECTION-->
+        <div class="search-field mx-auto mt-5">
+            <div class="input-group mb-3">
+                <input id="search-input" type="text" class="form-control" placeholder="Search Your Mobile">
+                <span onclick="loadMobiles()" type="button" class="btn" id="search-btn">Search</span>
+            </div>
+        </div>
 
-    </body>
+        <div class="container mt-5 pb-5">
+            <!-- TEXT CONTENT-->
+            <div id="text-content" class="text-center">
+                <h6 class="text">Find Your Mobile</h6>
+                <h4 class="text mt-3">“If your plans don’t include Technology, <br /> your plans are not finished”
+                </h4>
+                <img class="img-fluid rounded-3 mt-3" src="https://media.giphy.com/media/5xtDarqPCe4BofVSz3W/giphy.gif" width="250" alt="">
+            </div>
+            <!-- Display Mobile Detail -->
+            <div id="mobile-detail" class="d-lg-flex justify-content-center pb-5">
+                <!-- <div class="d-flex justify-content-center">
+                                <div>
+                                        <img src="" alt="">
+                                </div>
+                                <div>
+
+                                </div>
+                        </div> -->
+            </div>
+            <!--LOADING SPINNER-->
+            <div id="spinner" class="text-center">
+                <img src="https://cdn.dribbble.com/users/410304/screenshots/1773881/media/7d36ebbb7ae4892704f034701a8e9a27.gif" class="img-fluid" alt="">
+            </div>
+            <!-- ERROR MASSAGE-->
+            <div id="error-msg" class="mt-5 text-center error">
+
+            </div>
+            <!-- DISPLAY SEARCH MOBILE-->
+            <div id="display-mobile-container">
+                <div id="mobile-container" class="row row-cols-1 row-cols-md-3 g-4">
+                    <div class="col">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- MAIN SECTION START-->
+
+    <!-- JAVASCRIPT LINK-->
+    <script src="app.js"></script>
+    <!--BOOTSTRAP CDN CONNECTED -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
 
 </html>
